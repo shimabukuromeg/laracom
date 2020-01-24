@@ -62,14 +62,6 @@ services:
     image: redis:4-alpine
     ports:
       - 6379:6379
-  yarn:
-    build:
-      context: .
-      dockerfile: docker/yarn/Dockerfile
-    volumes:
-      - .:/app
-      - node-modules-volume:/app/node_modules
 volumes:
   composer-volume:
-  node-modules-volume:
   mysql-volume:
